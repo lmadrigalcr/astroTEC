@@ -7,20 +7,15 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema astroDB
 -- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema astroDB
--- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `astroDB` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
--- -----------------------------------------------------
--- Schema astroDB
--- -----------------------------------------------------
+USE `astroDB` ;
 
 -- -----------------------------------------------------
--- Schema astroDB
+-- User development
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `astroDB` ;
-USE `astroDB` ;
+CREATE USER 'development'@'localhost' IDENTIFIED BY '12345';
+GRANT ALL PRIVILEGES ON * . * TO 'development'@'localhost';
+FLUSH PRIVILEGES;
 
 -- -----------------------------------------------------
 -- Table `astroDB`.`EstadoUsuario`
