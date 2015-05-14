@@ -1,20 +1,18 @@
-function fadeIn( elem, ms )
-{
-  if( ! elem )
+function fadeIn(elem, ms) {
+  if (!elem) {
     return;
+  }
 
   elem.style.opacity = 0;
   elem.style.filter = "alpha(opacity=0)";
   elem.style.display = "inherit";
   elem.style.visibility = "visible";
 
-  if( ms )
-  {
+  if (ms) {
     var opacity = 0;
-    var timer = setInterval( function() {
+    var timer = setInterval(function() {
       opacity += 50 / ms;
-      if( opacity >= 1 )
-      {
+      if (opacity >= 1) {
         clearInterval(timer);
         opacity = 1;
       }
@@ -22,25 +20,22 @@ function fadeIn( elem, ms )
       elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
     }, 50 );
   }
-  else
-  {
+  else {
     elem.style.opacity = 1;
     elem.style.filter = "alpha(opacity=1)";
   }
 }
 
-function fadeOut( elem, ms )
-{
-  if( ! elem )
+function fadeOut(elem, ms) {
+  if (!elem) {
     return;
+  }
 
-  if( ms )
-  {
+  if (ms) {
     var opacity = 1;
-    var timer = setInterval( function() {
+    var timer = setInterval(function() {
       opacity -= 50 / ms;
-      if( opacity <= 0 )
-      {
+      if (opacity <= 0) {
         clearInterval(timer);
         opacity = 0;
         elem.style.display = "none";
@@ -50,8 +45,7 @@ function fadeOut( elem, ms )
       elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
     }, 50 );
   }
-  else
-  {
+  else {
     elem.style.opacity = 0;
     elem.style.filter = "alpha(opacity=0)";
     elem.style.display = "none";
