@@ -11,13 +11,6 @@ CREATE SCHEMA IF NOT EXISTS `astroDB` DEFAULT CHARACTER SET utf8 COLLATE utf8_ge
 USE `astroDB` ;
 
 -- -----------------------------------------------------
--- User development
--- -----------------------------------------------------
-CREATE USER 'development'@'localhost' IDENTIFIED BY '12345';
-GRANT ALL PRIVILEGES ON * . * TO 'development'@'localhost';
-FLUSH PRIVILEGES;
-
--- -----------------------------------------------------
 -- Table `astroDB`.`EstadoUsuario`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `astroDB`.`EstadoUsuario` (
@@ -32,12 +25,12 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `astroDB`.`Usuarios` (
   `idUsuario` INT NOT NULL AUTO_INCREMENT,
-  `apellido1` VARCHAR(45) NOT NULL,
-  `apellido2` VARCHAR(45) NOT NULL,
+  `apellido1` VARCHAR(45) NULL,
+  `apellido2` VARCHAR(45) NULL,
   `nombre` VARCHAR(45) NOT NULL,
   `correo` VARCHAR(150) NOT NULL,
   `password` VARCHAR(64) NOT NULL,
-  `genero` CHAR(1) NOT NULL,
+  `genero` CHAR(1) NULL,
   `fk_idEstado` INT NOT NULL,
   PRIMARY KEY (`idUsuario`),
   INDEX `fk_Usuarios_EstadoUsuario_idx` (`fk_idEstado` ASC),
