@@ -4,6 +4,13 @@ body
     padding-top: 60px;
     color: white; 
 }
+
+
+.tittle
+{
+   color: white;
+    text-align: center; 
+}
 .nav.nav-justified > li > a { position: relative; }
 .nav.nav-justified > li > a:hover,
 .nav.nav-justified > li > a:focus { background-color: transparent; }

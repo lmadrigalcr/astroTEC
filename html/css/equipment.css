@@ -1,0 +1,23 @@
+
+.tittle
+{
+	color: white;
+	text-align: center;
+}
+
+.panel
+{
+	margin-top: 2%;
+	background-color: gray;
+	border-color: gray;
+}
+
+.equipment-heading
+{
+	margin: 1%;
+}
+
+.space
+{
+	margin: 2%;
+}
