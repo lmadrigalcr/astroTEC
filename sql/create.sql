@@ -70,7 +70,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `astroDB`.`Eventos` (
   `idEvento` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(45) NOT NULL,
-  `fecha` DATE NOT NULL,
+  `fecha` DATETIME(3) NOT NULL,
   `descripcion` VARCHAR(200) NOT NULL,
   `fk_idGaleria` INT NOT NULL,
   `fk_idEstado` INT NOT NULL,
